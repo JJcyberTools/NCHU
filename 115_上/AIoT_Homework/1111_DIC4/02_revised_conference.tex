@@ -1,0 +1,38 @@
+\documentclass[conference]{IEEEtran}
+\usepackage{booktabs,tabularx,amsmath}
+\title{Context-Aware Restaurant Recommendation with Taichung Bus Accessibility: A Constraint-Aware AI Agent Framework}
+\author{\IEEEauthorblockN{Jin-De Lin, Yan-Zhe Gu, Yu-Jie Wei, and Chun-Yu Yeh}\IEEEauthorblockA{National Chung Hsing University}}
+\begin{document}\maketitle
+\begin{abstract}This revised conference draft proposes a context-first and transit-aware Taichung restaurant recommendation AI agent. Natural-language user preferences and semantic review evidence generate candidate restaurants; public bus plans, timeline analysis, and three-valued constraints filter candidates before final ranking. The design has nine modules and proposes evaluation of retrieval, transit feasibility and explanation traceability. No empirical improvement is claimed.\end{abstract}
+\begin{IEEEkeywords}AI agent, restaurant recommendation, public transportation, verification\end{IEEEkeywords}
+\section{Introduction}Contextual relevance does not guarantee a restaurant can be reached by bus. The proposed system analyzes transport conditions before restaurant ranking.
+\section{Related Work}
+\begin{table*}[t]\caption{Article Summary Table (Six AI and Six Domain Studies)}\centering\small
+\begin{tabular}{llll} \toprule Reference & Year & Method & Limitation \\ \midrule
+Xie et al. & 2024 & TravelPlanner & Planning complexity \\
+Hao et al. & 2025 & LLM and formal tools & Encoding dependency \\
+Ju et al. & 2024 & LLM and optimization & Intent parsing \\
+Su et al. & 2025 & BRIGHT retrieval & Reasoning difficulty \\
+Lee et al. & 2023 & Hybrid retrieval & Label bias \\
+Wang et al. & 2025 & Knowledge graph RAG & Dataset scope \\ \midrule
+Radlinski et al. & 2022 & Subjective preference & Conceptual scope \\
+Bursztyn et al. & 2021 & Restaurant critiques & Critique ambiguity \\
+Habib et al. & 2016 & Temporal restaurant ranking & Case-based evaluation \\
+Wang et al. & 2022 & Spatiotemporal POI & Component sensitivity \\
+Abuaisha et al. & 2025 & Transit replanning & Synthetic delays \\
+Rodriguez-Deniz and Villani & 2022 & Bus delay modeling & Generalization \\ \bottomrule
+\end{tabular}\end{table*}
+\section{Proposed Architecture}Nine modules include data collection, entity extraction, storage, user-intent interpretation, semantic retrieval, evidence filtering, bus analysis, T/F/U checking and ranking, and explained output.
+\section{Temporal Rules}Define a user request as $q=(c,o,t_{dep},B,L_{max},W_{max},N_{max},D_{meal})$. Boarding requires $t_{ready}\le t_{bus}\le t_{ready}+W_{max}$. All required conditions must be T before ranking; F is rejected and U remains provisional.
+\section{Numbered Algorithm}
+\begin{verbatim}
+01 Parse requirements
+02 Retrieve context candidates
+03 Gather evidence and bus plans
+04 Build timelines for each plan
+05 Check mandatory T/F/U constraints
+06 Rank verified plans by restaurant
+07 Explain up to three restaurant results
+\end{verbatim}
+\section{Evaluation and Conclusion}Compare BM25, vector, hybrid retrieval and transit-aware versus semantic-only recommendation. Experiments are not yet completed. The complete expanded manuscript is available in the downloadable DIC4 package accompanying this repository entry.
+\end{document}
