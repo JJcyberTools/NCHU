@@ -2,7 +2,7 @@
 
 老師要求：1. Overleaf draft for IEEE conference；2. 修改後版本；必須有 Article Summary Table。
 
-已在本資料夾提供初稿和修改後的 LaTeX 投稿草稿。**源檔由 Proposal Document.pdf、Proposal PPT.pdf、DESIGN.md 重建，並非未取得的原始 Overleaf 原始碼。** 全文為 Proposal 階段，沒有虛構實驗結果。
+GitHub 資料夾提供初稿及修訂版的精簡可編譯草稿；**完整擴寫版（含九模組架構圖、完整公式、12 篇文獻整理與行號演算法）在此對話的 DIC4_IEEE_Conference_Package.zip 下載包中**，下載後可直接上傳 Overleaf。**源檔由 Proposal Document.pdf、Proposal PPT.pdf、DESIGN.md 重建，並非未取得的原始 Overleaf 原始碼。** 全文為 Proposal 階段，沒有虛構實驗結果。
 
 ## Overleaf 使用方式
 
